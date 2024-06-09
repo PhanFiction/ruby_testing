@@ -48,18 +48,10 @@ describe NumberGame do
       # Write a similar test to the one above, that uses a custom matcher
       # instead of <, >, =.
       matcher :be_between_zero_and_nine do
-        match do |num|
-          num.between?(0, 9)
-        end
       end
 
       # remove the 'x' before running this test
-      it 'is a number between 0 and 9' do
-        # Arrange
-        # Act
-        result = 5
-        # Assert
-        expect(result).to be_between_zero_and_nine
+      xit 'is a number between 0 and 9' do
       end
     end
   end
@@ -86,10 +78,8 @@ describe NumberGame do
     # Create a new instance of NumberGame and write a test for when the @guess
     # does not equal @solution.
     context 'when user guess is not correct' do
-      subject(:game_guess) { described_class.new(4, '5') }
       # remove the 'x' before running this test
-      it 'is not game over' do
-        expect(game_guess.guess).not_to eq(game_guess.solution)
+      xit 'is not game over' do
       end
     end
   end
@@ -117,16 +107,7 @@ describe NumberGame do
 
     # Write a test for the following context.
     context 'when given invalid input as argument' do
-      it 'returns nil if user input is 33' do
-        user_input = '33'
-        verified_input = game_check.verify_input(user_input)
-        expect(verified_input).to be_nil
-      end
-
-      it 'returns nil if user input is b' do
-        user_input = 'b'
-        verified_input = game_check.verify_input(user_input)
-        expect(verified_input).to be_nil
+      xit 'returns nil' do
       end
     end
   end
